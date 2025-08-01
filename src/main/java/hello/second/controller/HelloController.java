@@ -34,9 +34,10 @@ public class HelloController {
     //localhost:8080/mvcapi?name=라마바&age=456
     @GetMapping("/mvcapi")
     @ResponseBody
-    public String mvcapi(@RequestParam("name") String name, @RequestParam("age") String age) {
+    public Mvc mvcapi(@RequestParam("name") String name, @RequestParam("age") String age) {
         Mvc mvc = new Mvc();
         mvc.setName(name);
-        return name + "님 환영합니다. " + name + "님의 나이는 " + age + "입니다.";
+        mvc.setName(age);
+        return mvc;
     }
 }
