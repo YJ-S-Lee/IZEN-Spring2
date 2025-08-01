@@ -29,5 +29,4 @@ public class HelloController {
     public String api(@RequestParam("name") String name, @RequestParam("age") String age) {
         return name + "님 환영합니다. " + name + "님의 나이는 " + age + "입니다.";
     }
-
 }
